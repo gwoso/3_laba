@@ -3,6 +3,12 @@
 ### Условие 1 задачи 
 ![image](https://github.com/gwoso/3_laba/assets/150545779/2f6d36da-8292-46d0-9ea4-1bd96551dec5)
 ### Алгоритм (рекурсия)
+1. Создаём функцию `create_n_dim_array`, принимающую на вход значения `n`, `x`
+2. Если `n <= 1`, то возвращаем `[f'level {n}']*x`
+3. Иначе возвращаем функцию `[(create_n_dim_array(n-1, x))]`, умноженную на `x`
+4. Выводим результат. Пусть `n = 2`, `x = 3`
+### Результат
+![image](https://github.com/gwoso/3_laba/assets/150545779/44ab3ca8-70c8-48c7-a95d-4e0cd94da5a6)
 ### Алгоритм (без рекурсии)
 ### Условие 2 задачи
 ![image](https://github.com/gwoso/3_laba/assets/150545779/fd6adbb2-9c20-424d-80c3-61718cc33d3b)
