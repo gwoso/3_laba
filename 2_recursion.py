@@ -11,7 +11,7 @@ def y_k(b, y, k):
     return yk
 
 def func(x, k): 
-    if x == 0:
+    if x <= 0:
         print("Incorrect value!")
         return
     b0 = 1 / (2 * x)
