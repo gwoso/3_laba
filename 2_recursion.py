@@ -1,23 +1,14 @@
-def f(b0, y0, k, x):
-        if k == 0:
-            return y0
-        bk = b0 * (x ** 2)
-        b0 = bk
-
-        yk = b0 * y0
-        y0 = yk
-
-        k = k - 1
-        return f(b0, y0, k, x)
-
-def func(x, k): 
+def func(x, k, b0 = None, y0 = 1):
     if x <= 0:
         print("Incorrect value!")
         return
-    b0 = 1 / (2 * x)
-    y0 = 1
 
-    a = f(b0, y0, k, x)
-    return a
-    
+    if b0 is None:
+        b0 = 1 / (2 * x)
+
+    if k == 0:
+        return y0
+    return func(x, k - 1, b0 * (x ** 2), b0 * y0)
+
+
 print(func(1, 3))
