@@ -1,9 +1,9 @@
-def create_n_dim_array(n, x):
+def create_n_dim_array(n, x, level = 1):
     if n <= 1:
-        return [f'level {n}']*x
-    return [(create_n_dim_array(n-1, x))] * x
+        return [f'level {level}']*x
+    return [(create_n_dim_array(n-1, x, level + 1))] * x
 
 
-print(create_n_dim_array(2, 3))
-#n - n-мерность массива
-#x - кол-во i, j, k... элементов
+result = create_n_dim_array(2, 3)
+for row in result:
+    print(row)
